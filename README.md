@@ -1,11 +1,11 @@
 # Plak-lang
-## A Simple Programming Language for Creating Text Games Effortlessly
+## A Simple Programming Language Designed for Creating Text Games Effortlessly
 
 ![Plak-lang Logo](https://github.com/SuperTavor/G-lang/assets/111663937/89333559-7c5e-4f93-829f-077d1cd30a6b)
 
-*i made the logo with mspaint*
+*i made the logo with mspaint haha*
 
-# Syntax Overview:
+# The Syntax In A Nutshell:
 ### Headers
 In Plak-lang, a header represents a print statement that must be accompanied by choices.
 To create a header, use `-` followed by `[Your_text]`.
