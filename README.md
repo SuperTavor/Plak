@@ -5,7 +5,7 @@
 
 *credit to kingu, he made the logo*
 
-# The Syntax In A Nutshell:
+# Syntax for Plak 0.1:
 ### Headers
 In Plak-lang, a header represents a print statement that must be accompanied by choices.
 To create a header, use `-` followed by `[Your_text]`.
@@ -55,7 +55,7 @@ Example:
       [END]
 ```
 
-# Planned Features for this Language:
-- Labels and goto functionality
-- Handling non-choice responses
-- Introducing variables support???
+# What will be added in the next update:
+- [WAIT] syscall
+- free-write responses
+- דופ
