@@ -1,9 +1,9 @@
 # Plak
 ## A Simple Programming Language Designed for Creating Text Games Effortlessly
 
-![Plak-lang Logo](https://github.com/SuperTavor/G-lang/assets/111663937/89333559-7c5e-4f93-829f-077d1cd30a6b)
+![image](https://github.com/SuperTavor/Plak/assets/111663937/4d21fdca-018b-4ef6-b9b8-af4da98a046a)
 
-*i made the logo with mspaint haha*
+*credit to kingu, he made the logo*
 
 # The Syntax In A Nutshell:
 ### Headers
