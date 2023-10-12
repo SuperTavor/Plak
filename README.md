@@ -1,52 +1,52 @@
 # Plak-lang
-## Programming language for making text games super easily.
+## A Simple Programming Language for Creating Text Games Effortlessly
 
-![image](https://github.com/SuperTavor/G-lang/assets/111663937/89333559-7c5e-4f93-829f-077d1cd30a6b)
+![Plak-lang Logo](https://github.com/SuperTavor/G-lang/assets/111663937/89333559-7c5e-4f93-829f-077d1cd30a6b)
 
+*I designed this logo using MS Paint.*
 
-*I made this logo in ms paint.*
-
-# Syntax:
-### Headers.
-a Plak header is a print statement that has to be followed by choices.
-`-` + `[Your_text]`
+# Syntax Overview:
+### Headers
+In Plak-lang, a header represents a print statement that must be accompanied by choices.
+To create a header, use `-` followed by `[Your_text]`.
 
 Example:
-```-Welcome to this text game! Would you like to be a warrior, or a wizard?```
-### Add choices to your header.
-In a new line, press `tab` to add a whitespace (for indentation).
-You can add a choice like this:
-`--` + `[Your_choice]`
+```-Welcome to this text game! Would you prefer to be a warrior, or a wizard?```
+
+### Adding Choices to Headers
+To include choices within a header, press `tab` for indentation on a new line.
+To add a choice, use `--` followed by `[Your_choice]`.
 
 Example:
 ```
--Welcome to this text game! Would you like to be a warrior, or a wizard?
+-Welcome to this text game! Would you prefer to be a warrior, or a wizard?
   --Warrior
   --Wizard
 ```
-### Choice branching
-after defining a choice, you can click enter to go to a new line. indent it so it's your choice's child.
-Here you can define a header, a syscall or a jump statement. You can't have a choice as a direct child of another choice.
+
+### Choice Branching
+Once a choice is defined, you can press enter to move to a new line and indent it to make it a child of the choice.
+You can define a header or a syscall at this level. Note that a choice cannot be a direct child of another choice.
+
 Example:
 ```
--Welcome to this text game! Would you like to be a warrior, or a wizard?
+-Welcome to this text game! Would you prefer to be a warrior, or a wizard?
   --Warrior
     -Awesome!
   --Wizard
     -That's cool!
 ```
-### SYSCalls
-syscalls are just built in functions you can use. They are wrapped with `[]` and can be used as a normal child for any choice. Syscalls are not case sensitive, but it's good practice to write them in all caps.
+
+### Syscalls
+Syscalls are predefined functions you can use, wrapped in `[]`. They can be used as a normal child for any choice. Syscalls are not case sensitive, but it's advisable to write them in all caps.
 
 Currently available syscalls:
-
-`END` - Ends the process.
-
-`WAIT + time(in seconds)` - Idles for a specified amount of time.
+- `END` - Terminates the process.
+- `WAIT + time (in seconds)` - Pauses for a specified duration.
 
 Example:
 ```
--Welcome to this text game! Would you like to be a warrior, or a wizard?
+-Welcome to this text game! Would you prefer to be a warrior, or a wizard?
   --Warrior
     -Awesome!
       [WAIT+2]
@@ -56,7 +56,7 @@ Example:
       [END]
 ```
 
-# This language is very unfinished. Planned features:
-* Labels and gotos
-* Non-choice answers
-* Variables????
+# Planned Features for this Language:
+- Labels and goto functionality
+- Handling non-choice responses
+- Introducing variables support???
