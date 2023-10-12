@@ -49,7 +49,6 @@ Example:
 -Welcome to this text game! Would you prefer to be a warrior, or a wizard?
   --Warrior
     -Awesome!
-      [WAIT+2]
         [END]
   --Wizard
     -That's cool!
