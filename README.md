@@ -53,13 +53,8 @@ Example:
     -That's cool!
       [END]
 ```
-### Labels and jumps
-Labels and jumps are like any programming language. you define a label like this:
 
-`==label_name`
-
-and you can jump to it like this:
-
-`!label_name`
-
-# This should be about it! Have fun making text games! New features coming soon 👀
+# This language is very unfinished. Planned features:
+* Labels and gotos
+* Non-choice answers
+* Variables????
