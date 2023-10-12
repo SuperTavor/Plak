@@ -54,8 +54,6 @@ Example:
     -That's cool!
       [END]
 ```
-
 # What will be added in the next update:
 - [WAIT] syscall
 - free-write responses
-- דופ
