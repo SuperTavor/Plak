@@ -3,7 +3,7 @@
 
 ![Plak-lang Logo](https://github.com/SuperTavor/G-lang/assets/111663937/89333559-7c5e-4f93-829f-077d1cd30a6b)
 
-*I designed this logo using MS Paint.*
+*i made the logo with mspaint*
 
 # Syntax Overview:
 ### Headers
