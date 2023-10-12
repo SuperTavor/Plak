@@ -1,7 +1,8 @@
 # Plak-lang
 ## Programming language for making text games super easily.
 
-![image](https://github.com/SuperTavor/G-lang/assets/111663937/ea0f7a81-9845-409a-903e-5fb2b11faddc)
+![image](https://github.com/SuperTavor/G-lang/assets/111663937/89333559-7c5e-4f93-829f-077d1cd30a6b)
+
 
 *I made this logo in ms paint.*
 
