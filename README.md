@@ -42,7 +42,7 @@ Syscalls are predefined functions you can use, wrapped in `[]`. They can be used
 
 Currently available syscalls:
 - `END` - Terminates the process.
-- `WAIT + time (in seconds)` - Pauses for a specified duration.
+(that's it for now, I will add more)
 
 Example:
 ```
