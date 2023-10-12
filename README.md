@@ -36,19 +36,21 @@ Example:
     -That's cool!
 ```
 ### SYSCalls
-syscalls are just built in functions you can use. They are wrapped with `[]` and can be used as a normal child for any choice.
-Here are all the syscalls so far:
+syscalls are just built in functions you can use. They are wrapped with `[]` and can be used as a normal child for any choice. Syscalls are not case sensitive, but it's good practice to write them in all caps.
 
-`END_NORMAL` - Exits the game
+Currently available syscalls:
 
-`END_MSG + your_message` - Exits the game with a custom message to replace "exiting game.."
+`END` - Ends the process.
+
+`WAIT + time(in seconds)` - Idles for a specified amount of time.
 
 Example:
 ```
 -Welcome to this text game! Would you like to be a warrior, or a wizard?
   --Warrior
     -Awesome!
-      [END]
+      [WAIT+2]
+        [END]
   --Wizard
     -That's cool!
       [END]
