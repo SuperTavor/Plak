@@ -20,8 +20,8 @@ To add a choice, use `--` followed by `[Your_choice]`.
 Example:
 ```
 -Welcome to this text game! Would you prefer to be a warrior, or a wizard?
-  --Warrior
-  --Wizard
+--Warrior
+--Wizard
 ```
 
 ### Choice Branching
@@ -31,10 +31,10 @@ You can define a header or a syscall at this level. Note that a choice cannot be
 Example:
 ```
 -Welcome to this text game! Would you prefer to be a warrior, or a wizard?
-  --Warrior
-    -Awesome!
-  --Wizard
-    -That's cool!
+--Warrior
+  -Awesome!
+--Wizard
+  -That's cool!
 ```
 
 ### Syscalls
@@ -47,12 +47,12 @@ Currently available syscalls:
 Example:
 ```
 -Welcome to this text game! Would you prefer to be a warrior, or a wizard?
-  --Warrior
-    -Awesome!
-        [END]
-  --Wizard
-    -That's cool!
-      [END]
+--Warrior
+  -Awesome!
+    [END]
+--Wizard
+  -That's cool!
+    [END]
 ```
 # What will be added in the next update:
 - [WAIT] syscall
