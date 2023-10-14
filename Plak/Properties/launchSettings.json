@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Plak": {
+      "commandName": "Project",
+      "commandLineArgs": "game.plk"
+    }
+  }
+}
