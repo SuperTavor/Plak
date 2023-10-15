@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Collections;
 
 namespace Plak.ArrayFormatManager
 {
@@ -10,10 +12,13 @@ namespace Plak.ArrayFormatManager
     {
         public void init(string content, int choicelvl, toArrayMain main)
         {
-
+            Random rnd = new Random();
+            byte[] tmpSource = ASCIIEncoding.ASCII.GetBytes(content + rnd.Next(10000).ToString());
+            byte[] tmpHash = new MD5CryptoServiceProvider().ComputeHash(tmpSource); ;
+            string id = BitConverter.ToString(tmpHash);
             if (content.Trim() == "[END]" || content.Trim() == "[END]".ToLower())
             {
-                main.syscalls.Add("syscall: " + "exit" + " | ChoiceLevel = " + choicelvl);
+                main.syscalls.Add("syscall: " + "exit" + " | ChoiceLevel = " + choicelvl + "|ID:" + id);
             }
             else
             {

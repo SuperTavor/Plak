@@ -2,7 +2,7 @@
   "profiles": {
     "Plak": {
       "commandName": "Project",
-      "commandLineArgs": "game.plk"
+      "commandLineArgs": "\"C:\\Users\\yehon\\Downloads\\Plak\\Plak\\sample.plk\""
     }
   }
 }
