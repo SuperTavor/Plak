@@ -29,6 +29,7 @@ namespace Plak.ArrayFormatManager
         static (string[], string[], string[]) arraySorter(string[] origScript)
         {
             toArrayMain thisclass = new toArrayMain();
+            var lineIndex = 1;
             foreach (var line in origScript)
             {
 
@@ -36,43 +37,56 @@ namespace Plak.ArrayFormatManager
                 {
                     var choiceLvl = getChoiceLevel(line);
                     header header = new header();
-                    header.init(line, choiceLvl, thisclass);
+                    header.init(line, choiceLvl, thisclass, lineIndex);
 
                 }
                 else if (line.Trim().StartsWith("--"))
                 {
                     var choiceLvl = getChoiceLevel(line);
                     choice choice = new choice();
-                    choice.init(line, choiceLvl, thisclass);
+                    choice.init(line, choiceLvl, thisclass, lineIndex);
 
                 }
                 else if (line.Trim().StartsWith("[") && line.Trim().Contains("]"))
                 {
                     var choiceLvl = getChoiceLevel(line);
                     syscall syscall = new syscall();
-                    syscall.init(line, choiceLvl, thisclass);
+                    syscall.init(line, choiceLvl, thisclass, lineIndex);
                 }
                 else
                 {
-                    throwSyntaxError("Not a valid prefix at line " + thisclass.getIndexInFile(line) + ": " + line.Trim());
+                    throwSyntaxError("Not a valid prefix at line " + lineIndex + ": " + line.Trim());
                 }
+                lineIndex++;
             }
+
             return (thisclass.headers.ToArray(), thisclass.choices.ToArray(), thisclass.syscalls.ToArray());
         }
-        static int getChoiceLevel(string line)
+        static int getChoiceLevel(string line, int spacesPerIndentation = 4)
         {
-            int level = 0;
-            int spacesPerIndentation = 4;
+            if (string.IsNullOrWhiteSpace(line))
+                return 0;
 
-            foreach (char ch in line)
+            int level = 0;
+            int i = 0;
+
+            while (i < line.Length)
             {
+                char ch = line[i];
                 if (ch == ' ')
                 {
-                    level++;
+                    int spacesCount = 0;
+                    while (i < line.Length && line[i] == ' ')
+                    {
+                        spacesCount++;
+                        i++;
+                    }
+                    level += spacesCount;
                 }
                 else if (ch == '\t')
                 {
                     level += spacesPerIndentation;
+                    i++;
                 }
                 else
                 {
@@ -82,6 +96,10 @@ namespace Plak.ArrayFormatManager
 
             return level / spacesPerIndentation;
         }
+
+
+
+
 
         public static void throwSyntaxError(string message)
         {

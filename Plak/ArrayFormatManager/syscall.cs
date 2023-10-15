@@ -10,7 +10,7 @@ namespace Plak.ArrayFormatManager
 {
     class syscall
     {
-        public void init(string content, int choicelvl, toArrayMain main)
+        public void init(string content, int choicelvl, toArrayMain main,int origLineNum)
         {
             Random rnd = new Random();
             byte[] tmpSource = ASCIIEncoding.ASCII.GetBytes(content + rnd.Next(10000).ToString());
@@ -18,7 +18,7 @@ namespace Plak.ArrayFormatManager
             string id = BitConverter.ToString(tmpHash);
             if (content.Trim() == "[END]" || content.Trim() == "[END]".ToLower())
             {
-                main.syscalls.Add("syscall: " + "exit" + " | ChoiceLevel = " + choicelvl + "|ID:" + id);
+                main.syscalls.Add("syscall: " + "exit" + " | ChoiceLevel = " + choicelvl + "|ID:" + id + "|OriginalLineNum: " + (origLineNum));
             }
             else
             {

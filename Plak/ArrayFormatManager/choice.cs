@@ -8,13 +8,13 @@ namespace Plak.ArrayFormatManager
 {
     class choice
     {
-        public void init(string content, int choicelvl, toArrayMain main)
+        public void init(string content, int choicelvl, toArrayMain main, int origLineNum)
         {
             Random rnd = new Random();
             byte[] tmpSource = ASCIIEncoding.ASCII.GetBytes(content + rnd.Next(10000).ToString());
             byte[] tmpHash = new MD5CryptoServiceProvider().ComputeHash(tmpSource); ;
             string id = BitConverter.ToString(tmpHash);
-            main.headers.Add("Choice:" + content.Trim().Substring(2) + " | ChoiceLevel = " + choicelvl + "|ID:" + id);
+            main.headers.Add("Choice: " + content.Trim().Substring(2) + " | ChoiceLevel = " + choicelvl + "|ID:" + id + "|OriginalLineNum: " + origLineNum);
         }
     }
 }
