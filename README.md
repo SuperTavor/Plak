@@ -14,7 +14,7 @@ Example:
 ```-Welcome to this text game! Would you prefer to be a warrior, or a wizard?```
 
 ### Adding Choices to Headers
-To include choices within a header, press `tab` for indentation on a new line or just type out 4 spaces (note: this number can be changed by forking the repo, changing an argument in [this](https://github.com/SuperTavor/Plak/blob/main/Plak/ArrayFormatManager/toArrayMain.cs#L65) function and building).
+To include choices within a header, press `tab` for indentation on a new line or just type out 4 spaces manually (note: the tab key might not always work. I recommend typing out 4 spaces. this number can be changed by forking the repo, changing an argument in [this](https://github.com/SuperTavor/Plak/blob/main/Plak/ArrayFormatManager/toArrayMain.cs#L65) function and building).
 To add a choice, use `--` followed by `[Your_choice]`.
 
 Example:
