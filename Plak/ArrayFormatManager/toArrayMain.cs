@@ -13,18 +13,7 @@ namespace Plak.ArrayFormatManager
             toArrayMain toBranch = new toArrayMain();
             toBranch.origScript = File.ReadAllLines(input.FullName);
             var arrays = arraySorter(toBranch.origScript);
-            foreach (string header in arrays.Item1)
-            {
-                Console.WriteLine(header);
-            }
-            foreach (string choice in arrays.Item2)
-            {
-                Console.WriteLine(choice);
-            }
-            foreach (string syscall in arrays.Item3)
-            {
-                Console.WriteLine(syscall);
-            }
+
         }
         static (string[], string[], string[]) arraySorter(string[] origScript)
         {
